@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for @sea do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -25,4 +26,10 @@
 
   <%=  f.submit %>
 
+  <br />
+
+  <%= button_to "delete sea", {:controller => :seas,
+      :action => 'destroy', :id => @sea.id }, :method => :delete %>
+
   <% end %>
+</div>
