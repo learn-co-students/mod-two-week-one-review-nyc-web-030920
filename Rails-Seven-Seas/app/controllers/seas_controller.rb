@@ -1,6 +1,9 @@
 class SeasController < ApplicationController
   #define your controller actions here
 
+  def index
+    @seas = Sea.all
+  end
 
   private
   # In controller actions, use this private method to access sea params from forms.
@@ -10,4 +13,5 @@ class SeasController < ApplicationController
     params.require(:sea).permit(:name, :temperature, :bio, :mood, :image_url, :favorite_color, :scariest_creature, :has_mermaids)
   end
 
+  
 end
