@@ -25,4 +25,9 @@
 
   <%=  f.submit %>
 
+  <br />
+
+  <%= button_to "delete sea", {:controller => :seas,
+      :action => 'destroy', :id => @sea.id }, :method => :delete %>
+
   <% end %>
