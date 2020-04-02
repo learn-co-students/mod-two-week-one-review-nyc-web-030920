@@ -3,19 +3,10 @@ Rails.application.routes.draw do
 
   get '/', to: 'application#welcome'
   get '/seas', to: 'seas#index'
+  get '/seas/new', to: 'seas#new'
+  get '/seas/:id', to: 'seas#show', as: 'sea'
+  get '/seas/:id/edit', to: 'seas#edit'
 end
-
-
-
-
-# get "/seas/new" do
-#   erb :'new.html'
-# end
-
-# get "/seas/:id" do
-#   @sea = Sea.find(params[:id])
-#   erb :'show.html'
-# end
 
 # post "/seas" do
 #   @sea = Sea.new(params)
@@ -23,11 +14,7 @@ end
 #   redirect to "/seas/#{@sea.id}"
 # end
 
-# get "/seas/:id/edit" do
-#   @sea = Sea.find(params[:id])
 
-#   erb :'edit.html'
-# end
 
 # patch "/seas/:id" do
 #   @sea = Sea.find(params[:id])
